@@ -4,7 +4,7 @@ Description :
 -The utilty is used to  determine the availbilty of a given server mentioned in input.json file.
 
 Pre-requist
--Node 
+-Node v12.19.0
 -Git
 
 Installation : 
