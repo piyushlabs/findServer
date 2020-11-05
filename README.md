@@ -14,3 +14,6 @@
 -Open cmd in the folder findServer run npm i to install the node packages to your utility.
 -run node index.js in cmd.
 ----------------------------------------------------------------------------------------------------------------------------------------------
+
+Running a mock server :
+Open cmd in findServer\features and run node server.js
