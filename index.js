@@ -5,7 +5,7 @@ const axios = require('axios');
 
 const successUrl = [];
 
-
+//Extenal function used for sorting 
 function compare( a, b ) {
     if ( a.priority < b.priority ){
       return -1;
@@ -16,7 +16,7 @@ function compare( a, b ) {
     return 0;
 }
   
-
+//Function determines the available urls
 async function findServer(urlObj){
     console.log("222222222222");
     await Promise.allSettled(urlObj.map(req =>{
@@ -26,14 +26,11 @@ async function findServer(urlObj){
             if(status>=200 && status<=299){
                 successUrl.push(req);
                 console.log("5555555555");
-                //console.log(req);
-                //Promise.resolve(33);
             }
         })
         .catch((error) => {
-            //console.log(error); 
+            console.log(error); 
             console.log("44444444444444");
-            //Promise.reject("Error");
         })
     }));
 
