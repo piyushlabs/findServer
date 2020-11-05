@@ -14,7 +14,7 @@ function compare( a, b ) {
       return 1;
     }
     return 0;
-  }
+}
   
 
 async function findServer(urlObj){
@@ -36,14 +36,32 @@ async function findServer(urlObj){
             //Promise.reject("Error");
         })
     }));
+
+    return new Promise(function(resolve,reject){
+        if(successUrl.length>0){
+            console.log("I am here")
+            resolve(successUrl.sort(compare)[0])
+        }
+        else{
+            console.log("I am there")
+            reject("All servers are offline")
+        }
+    })
 }
 
 console.log("111111111111");
-findServer(urlList).then( () => {
+findServer(urlList).then( (result) => {
     if(successUrl.length>0){
-        console.log(successUrl.sort(compare).reverse()[0]);
+        console.log(result);
         console.log("666666666");
+        }
+    else{
+        console.log("All serves are offline");
         }
     }
 )
+.catch((error) => { 
+    console.log(error);
+})
+
 console.log("33333333333333");
