@@ -4,11 +4,12 @@
   "description": "Solution of assignement to find the priorty of a server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Piyush Sarin",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.0"
+    "axios": "^0.21.0",
+    "mocha": "^8.2.1"
   }
 }

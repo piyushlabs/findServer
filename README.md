@@ -16,4 +16,9 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
 Running a mock server :
-Open cmd in findServer\features and run node server.js
+Open cmd in findServer\features and run node server.js and hit the browser with http://localhost:8089/
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Unit testing
+-run the mock server as directed above 
+-run npm run test
